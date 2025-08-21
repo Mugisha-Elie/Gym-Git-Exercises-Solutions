@@ -187,3 +187,237 @@ Dropped refs/stash@{0} (5290a0b5be1813f3950d8bf3f26c9bace764b382)
 hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (main)
 $ git reset
 ```
+
+## Bundle 2
+
+### Exercise 1
+
+```bash
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (main)
+$ git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        services.html
+        team.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (ft/bundle-2)
+$ git add .
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (ft/bundle-2)
+$ git commit -m "bundle2-exercise1 commit"
+[ft/bundle-2 445ddf5] bundle2-exercise1 commit
+ 2 files changed, 22 insertions(+)
+ create mode 100644 services.html
+ create mode 100644 team.html
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (ft/bundle-2)
+$ git push
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-2
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (ft/bundle-2)
+$ git push -u origin ft/bundle-2
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 595 bytes | 297.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/Mugisha-Elie/Git-Exercises/pull/new/ft/bundle-2
+remote:
+To https://github.com/Mugisha-Elie/Git-Exercises
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+```
+
+### Exercise 2
+
+```bash
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (ft/bundle-2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (main)
+$ git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 917 bytes | 91.00 KiB/s, done.
+From https://github.com/Mugisha-Elie/Git-Exercises
+   4fe50fe..a818854  main       -> origin/main
+Updating 4fe50fe..a818854
+Fast-forward
+ services.html | 11 +++++++++++
+ team.html     | 11 +++++++++++
+ 2 files changed, 22 insertions(+)
+ create mode 100644 services.html
+ create mode 100644 team.html
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (main)
+$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (ft/service-redesign)
+$ git add .
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (ft/service-redesign)
+$ git commit -m "add new changes to service"
+[ft/service-redesign 599754a] add new changes to service
+ 1 file changed, 2 insertions(+)
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (ft/service-redesign)
+$ git push -u origin ft/service-redesign
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 705 bytes | 176.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/Mugisha-Elie/Git-Exercises/pull/new/ft/service-r
+edesign
+remote:
+To https://github.com/Mugisha-Elie/Git-Exercises
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (main)
+$ git add services.html
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (main)
+$ git commit -m "modify services.html"
+[main 15819c7] modify services.html
+ 1 file changed, 2 insertions(+)
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (main)
+$ git fetch
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 909 bytes | 60.00 KiB/s, done.
+From https://github.com/Mugisha-Elie/Git-Exercises
+   4e591d4..2d1797d  main       -> origin/main
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (main)
+$ git pull
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (main|MERGING)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 2 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   services.html
+
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (main|MERGING)
+$ git commit -m "services from main"
+[main 979ef8e] services from main
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (ft/service-redesign)
+$ git diff ft/service-redesign main
+diff --git a/services.html b/services.html
+index 8153429..8c08d63 100644
+--- a/services.html
++++ b/services.html
+@@ -19,6 +19,6 @@
+         <li>Tourism</li>
+     </ul>
+
+-    <p>Contact us: Email: Johndoe@example.com</p>
++
+ </body>
+ </html>
+\ No newline at end of file
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (ft/service-redesign)
+$ git merge ft/service-redesign
+Already up to date.
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (ft/service-redesign)
+$ git merge main
+Updating 599754a..979ef8e
+Fast-forward
+ services.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (ft/service-redesign)
+$ git commit -m "service after merge"
+On branch ft/service-redesign
+Your branch is ahead of 'origin/ft/service-redesign' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+hp@Mr-DESKTOP-2LKS69K MINGW64 ~/Desktop/Git Exercises (main)
+$ git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Mugisha-Elie/Git-Exercises
+   2d1797d..979ef8e  main -> main
+```
