@@ -103,3 +103,22 @@ Fast-forward
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 ```
+
+## Bundle 3
+
+### Exercise 1
+
+```bash
+- Command to check commit history and view commit hashes, branch and author
+$ git log
+
+- Command to minimize the size of the output from the commit history
+$ git log --oneline
+
+- Command to move a commit from one branch to another without merging
+$ git cherry-pick cb06e4e612e8b2dd7ec3a003a219b228ce891af9
+
+- Command to to revert to a specific commit
+$ git revert cb06e4e612e8b2dd7ec3a003a219b228ce891af9            
+
+```
