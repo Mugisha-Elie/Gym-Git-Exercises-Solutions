@@ -122,3 +122,14 @@ $ git cherry-pick cb06e4e612e8b2dd7ec3a003a219b228ce891af9
 $ git revert cb06e4e612e8b2dd7ec3a003a219b228ce891af9            
 
 ```
+
+### Exercise 2
+
+```bash
+- Command to move your commits from one place to another
+- Instead of creating a new merge commit to combine branches, it takes your branchs commits and puts them directly on top of another branchs most recent commit  
+$ git rebase main
+
+- If you encounter a conflict or any error git pauses the rebase for you to solve you error first and then run this command to continue
+$ git rebase --continue
+```
