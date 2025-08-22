@@ -164,3 +164,25 @@ Fast-forward
 Squash commit -- not updating HEAD
 
 ```
+
+## Bundle 5, Bundle 6
+
+```bash
+- Command to stage changes in index.html
+$ git add index.html
+
+- Command to commit new changes
+$ git commit -m "modify welcome text"
+
+- Command for pushing commits to remote repository
+$ git push -u origin main
+
+- Command for creating and working on a new branch ft/menu-page
+$ git checkout -b ft/menu-page
+
+- Command for pushing new changes from the new branch
+$ git push -u origin ft/menu-page
+
+- Command for pulling latest changes to local repo
+$ git pull
+```
