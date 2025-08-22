@@ -133,3 +133,19 @@ $ git rebase main
 - If you encounter a conflict or any error git pauses the rebase for you to solve you error first and then run this command to continue
 $ git rebase --continue
 ```
+
+
+## Bundle 4
+
+### Exercise 1
+
+```bash
+- Command to add a new remote repo git copy
+$ git remote add git-copy "https://github.com/Mugisha-Elie/Git-Exercises-New"
+
+- Command for pushing to the newly added repo
+$ git push -u git-copy main
+
+- Command for pushing to main
+$ git push -u origin main
+```
