@@ -149,3 +149,18 @@ $ git push -u git-copy main
 - Command for pushing to main
 $ git push -u origin main
 ```
+
+
+### Exercise 2
+
+```bash
+- Command to create a new branch called ft/squashing
+$ git branch ft/squashing
+
+- Command to squash the changes from ft/footer to the ft/squashing branch
+$ git merge --squash ft/squashing
+Updating cda49d7..f1c46f6
+Fast-forward
+Squash commit -- not updating HEAD
+
+```
